@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let articulos = [
+            {nombre: 'Bici', costo: 3000},
+            {nombre: 'Tv', costo: 2500},
+            {nombre: 'Libro', costo: 320},
+            {nombre: 'Celular', costo: 10000},
+            {nombre: 'Laptop', costo: 20000},
+            {nombre: 'Teclado', costo: 500},
+            {nombre: 'Audifonos', costo: 1700},
+        ];
+
+        console.log(articulos);
+
+        // Método filter - Retorna articulos que cumplen con la condición
+        console.log('*** Método filter ***');
+        let articulosFiltrados = articulos.filter(function(articulo){
+            return articulo.costo <= 500;
+        });
+        console.log(articulosFiltrados);
+
+        // Método map - Retorna los nombres de todos los articulos
+        console.log('*** Método map ***');
+        let nombreArticulos = articulos.map((articulo)=>{
+            return articulo.nombre;
+        });
+        console.log(nombreArticulos);
+
+        // Método find - Retorna articulos que cumplen con la condición
+        console.log('*** Método find ***');
+        let encuentraArticulo = articulos.find((articulo)=>{
+            return articulo.nombre === 'Laptop';
+        });
+        console.log(encuentraArticulo);
+
+        // Método forEach - Imprime nombre de los articulos
+        console.log('*** Método forEach ***');
+        articulos.forEach((articulo)=>{
+            console.log(articulo.nombre);
+        });
+
+        // Método some - Retorna verdadero o false.
+        console.log('*** Método some ***');
+        let articulosBaratos = articulos.some((articulo)=>{
+            return articulo.costo <= 700;
+        });
+        console.log(articulosBaratos);
+
+    </script>
+</body>
+</html>

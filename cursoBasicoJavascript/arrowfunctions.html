@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrow functions</h1>
+    <script>
+
+        // Función expresada
+        const saludar = function(){
+            console.log('Hola');
+        }
+
+        saludar();
+
+        // Finción declarada
+        function saluda(){
+            console.log('Hello');
+        }
+
+        // Arrow function sin parámetros
+        // const saludo = ()=> console.log('Hola ...');
+        // saludo();
+
+        // Arrow function con un parámetro
+        const saludo = nombre => console.log('Hola '+nombre);
+
+        saludo('Javier');
+
+        // Función sumar
+        const sumar = function(a,b){
+            return a+b;
+        }
+
+        // Función sumar arrow function
+        const sumar1 = (a,b) =>{
+            return a+b;
+        }
+
+        console.log(sumar1(8, 9));
+
+        // Ejemplo
+        const numeros = [1, 2, 3];
+
+        numeros.forEach(function(el, index){
+            console.log('El elemento '+el+' está en la posición '+index);
+        })
+
+        // Utilizando arrow function
+        console.log('***** Uso de arrow functións foreach *******');
+        numeros.forEach((el, index)=>{
+            console.log('El elemento '+el+' está en la posición '+index);
+        });
+
+
+        // function perro(){
+        //     console.log(this);
+        // }
+
+        // perro();
+
+        const perro= {
+            nombre:'kenai',
+            ladrar(){
+                console.log(this);
+            }
+        }
+
+        perro.ladrar();
+
+    </script>
+</body>
+</html>

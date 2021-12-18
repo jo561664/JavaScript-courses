@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objetos literales</h1>
+    <p>Nueva forma de escribir atributos y métodos.</p>
+    <script>
+        let nombre = 'Javier',
+            edad = 20;
+
+        // Ejemplo objeto no literal.
+        const persona = {
+            nombre: nombre,
+            edad:edad,
+            caminar: function(){
+                console.log('Test...');
+            }
+        }
+
+        console.log(persona);
+        persona.caminar();
+
+        // Ejemplo objeto literal.
+        let people = {
+            nombre,
+            edad,
+            edad: 20,
+            caminar(){
+                console.log('test...'+this.nombre+'..test');
+            }
+        }
+
+        console.log(people);
+        people.caminar();
+
+    </script>
+</body>
+</html>

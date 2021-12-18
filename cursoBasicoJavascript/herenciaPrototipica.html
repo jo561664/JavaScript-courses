@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herencia Prototípica</title>
+</head>
+<body>
+    <h1>Herencia prototípica</h1>
+    <script>
+
+        // Función constructora donde asignamos los métodos al prototipo, no a la función como tal
+        function Animal(nombre, genero){
+            // Atributos
+            this.nombre = nombre;
+            this.genero = genero;
+        }
+
+        // Métodos agregados al prototipo de la función constructora
+        Animal.prototype.sonar = function(){
+            console.log('Hago sonidos porque estoy vivo.')
+        }
+
+        // Herencia prototipica
+        function Perro(nombre, genero, tamanio){
+            this.super = Animal();
+            this.super();
+        }
+
+        // Instancia de la función constructora animal
+        const snoopy = new Animal('Snoopy', 'Macho'),
+        lolaBunny = new Animal('Lola Bunny', 'Hembra');
+
+        console.log(snoopy);
+        console.log(lolaBunny);
+        
+    </script>
+</body>
+</html>
